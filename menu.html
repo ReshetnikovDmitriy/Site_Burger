@@ -34,9 +34,9 @@
 					<nav>
 						<ul class="header-nav">
 							<li><a href="index.html">Главная</a></li>
-							<li><a class="active" href="#">Меню</a></li>
-							<li><a href="#">О нас</a></li>
-							<li><a href="#">Контакты</a></li>
+							<li><a class="active" href="menu.html">Меню</a></li>
+							<li><a href="about.html">О нас</a></li>
+							<li><a href="contact.html">Контакты</a></li>
 						</ul>
 					</nav>
 				</div>
@@ -207,9 +207,9 @@
 					<h2>основные ссылки</h2>
 					<ul class="footer-list">
 						<li><a href="menu.html">Меню</a></li>
-						<li><a href="#">Заказ и Доставка</a></li>
-						<li><a href="#">Методы оплаты</a></li>
-						<li><a href="#">Контакты</a></li>
+						<li><a href="contact.html">Заказ и Доставка</a></li>
+						<li><a href="contact.html">Методы оплаты</a></li>
+						<li><a href="about.html">Контакты</a></li>
 					</ul>
 					<ul class="footer-list footer-lis-tel">
 						<li>
@@ -253,69 +253,14 @@
 	<div class="modal" id="modal">
 		<ul class="header-nav">
 			<li><a href="index.html">Главная</a></li>
-			<li><a class="active" href="#">Меню</a></li>
+			<li><a class="active" href="menu.html">Меню</a></li>
 			<li><a href="#">О нас</a></li>
-			<li><a href="#">Контакты</a></li>
+			<li><a href="contact.html">Контакты</a></li>
 		</ul>
 		<button class="burger-close" onclick="closeModal()"></button>
 	</div>
 
-	<script>
-		//Smooth Scroll
-
-		const links = document.querySelectorAll(".banner-link");
-
-		for (const link of links) {
-		link.addEventListener("click", clickHandler);
-		}
-
-		function clickHandler(e) {
-		e.preventDefault();
-		const href = this.getAttribute("href");
-
-		document.querySelector(href).scrollIntoView({
-			behavior: "smooth"
-		});
-		}
-
-		//Button Up
-
-		window.onscroll = function(){scrollFunction()};
-
-		const upbuttons = document.querySelectorAll(".button-up");
-
-		for (const upbutton of upbuttons) {
-			upbutton.addEventListener("click", clickHandler);
-		}
-
-		function clickHandler(e) {
-		e.preventDefault();
-		const href = this.getAttribute("href");
-
-		document.querySelector(href).scrollIntoView({
-			behavior: "smooth"
-		});
-		}
-
-		function scrollFunction(){
-			if ( document.body.scrollTop > 1000 || document.documentElement.scrollTop > 1000){
-				document.getElementById('btnUp').className = 'button-up visible';
-			} else {
-				document.getElementById('btnUp').className = 'button-up hidden';
-			}
-		}
-
-		// Menu
-
-		function openModal() {
-           document.getElementById("modal").style.top = "0px";
-       }
-
-       function closeModal() {
-           document.getElementById("modal").style.top = "-400px";
-       }
-
-	</script>
+	<script src="index.js"></script>
 </body>
 
 </html>
